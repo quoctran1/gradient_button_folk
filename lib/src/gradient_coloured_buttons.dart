@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class GradientButton extends StatelessWidget {
   final String text;
-  final VoidCallback onPressed;
+  final VoidCallback onPressed,onLongPressed;
   final List<Color> gradientColors;
   final double width;
   final double height;
@@ -13,6 +13,7 @@ class GradientButton extends StatelessWidget {
     Key? key,
     required this.text,
     required this.onPressed,
+    required this.onLongPressed,
     this.gradientColors = const [Colors.blue, Colors.green],
     this.width = 200.0,
     this.height = 50.0,
@@ -27,6 +28,7 @@ class GradientButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         onPressed: onPressed,
+        onLongPress: onLongPressed,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
