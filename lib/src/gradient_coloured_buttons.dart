@@ -28,7 +28,10 @@ class GradientButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         onPressed: onPressed,
-        onLongPress: onLongPressed,
+        onLongPress: (){
+          print('Commit 1');
+          onLongPressed();
+        },
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
